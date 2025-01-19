@@ -1,14 +1,17 @@
+import string
 # Original text
-text = "Etiam tincidunt neque erat, quis molestie enim imperdiet vel. Integer urna nisl, facilisis vitae semper at, dignissim vitae libero"
+text = "Etiam tincidunt neque erat, quis molestie enim imperdiet vel. Integer urna nisl, facilisis vitae semper at, dignissim vitae libero!"
 
 # Split the text into words while preserving punctuation
 words = text.split()
+print(f"{words = }")
 processed_words = []
+print(string.punctuation)
 
 # Process each word
 for word in words:
     # Check if the word ends with punctuation
-    if word[-1] in [',', '.']:
+    if word[-1] in string.punctuation:
         # Separate punctuation from word
         pure_word = word[:-1]
         punctuation = word[-1]
