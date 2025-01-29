@@ -1,31 +1,30 @@
-def _add(x, y):
+def __add(x, y):
     return x + y
 
 
-def _subtract(x, y):
+def __subtract(x, y):
     return x - y
 
 
-def _multiply(x, y):
+def __multiply(x, y):
     return x * y
 
 
-def _divide(x, y):
+def __divide(x, y):
     if y == 0:
-        raise ZeroDivisionError("Деление на ноль невозможно.")
+        raise ValueError("Cannot divide by zero")
     return x / y
 
 
 def calculate(x, y, operation):
-
     match operation:
         case '+':
-            return _add(x, y)
+            return __add(x, y)
         case '-':
-            return _subtract(x, y)
+            return __subtract(x, y)
         case '*':
-            return _multiply(x, y)
+            return __multiply(x, y)
         case '/':
-            return _divide(x, y)
+            return __divide(x, y)
         case _:
-            raise ValueError(f"Неверная операция: {operation}")
+            raise ValueError("Invalid operation")

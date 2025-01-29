@@ -1,9 +1,5 @@
-from mul_mod import mul
+from mul_mod import *
 
+mul_result = mul(4, 5)
 
-def main():
-    print(mul(3, 4))
-    print(mul(-3, 4))
-
-if __name__ == "__main__":
-    main()
+print(mul_result)
