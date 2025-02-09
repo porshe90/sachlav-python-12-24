@@ -13,9 +13,12 @@ def accum_1():
 def test_create_accum(accum):
     assert_that(accum.count).is_equal_to(0)
 
+@pytest.mark.regression
 def test_create_accum_with_arg(accum_1):
     assert_that(accum_1.count).is_equal_to(1)
 
+@pytest.mark.sanity
+@pytest.mark.regression
 def test_create_accum_with_adding(accum):
     accum.add_counts(5)
     # assert accum.count == 4
